@@ -1,11 +1,31 @@
+'''
 AMINO_ACIDS = {'ATT': 'I', 'ATC': 'I', 'ATA': 'I',
 'CTT': 'L', 'CTC': 'L', 'CTA': 'L', 'CTG': 'L', 'TTA': 'L', 'TTG': 'L',
 'GTT': 'V', 'GTC': 'V', 'GTA': 'V', 'GTG': 'V',
 'TTT': 'F', 'TTC': 'F',
 'ATG': 'M'}
+'''
+
+AMINO_ACIDS = { 
+    'ATA':'I', 'ATC':'I', 'ATT':'I', 'ATG':'M', 
+    'ACA':'T', 'ACC':'T', 'ACG':'T', 'ACT':'T', 
+    'AAC':'N', 'AAT':'N', 'AAA':'K', 'AAG':'K', 
+    'AGC':'S', 'AGT':'S', 'AGA':'R', 'AGG':'R',                  
+    'CTA':'L', 'CTC':'L', 'CTG':'L', 'CTT':'L', 
+    'CCA':'P', 'CCC':'P', 'CCG':'P', 'CCT':'P', 
+    'CAC':'H', 'CAT':'H', 'CAA':'Q', 'CAG':'Q', 
+    'CGA':'R', 'CGC':'R', 'CGG':'R', 'CGT':'R', 
+    'GTA':'V', 'GTC':'V', 'GTG':'V', 'GTT':'V', 
+    'GCA':'A', 'GCC':'A', 'GCG':'A', 'GCT':'A', 
+    'GAC':'D', 'GAT':'D', 'GAA':'E', 'GAG':'E', 
+    'GGA':'G', 'GGC':'G', 'GGG':'G', 'GGT':'G', 
+    'TCA':'S', 'TCC':'S', 'TCG':'S', 'TCT':'S', 
+    'TTC':'F', 'TTT':'F', 'TTA':'L', 'TTG':'L', 
+    'TAC':'Y', 'TAT':'Y', 'TAA':'_', 'TAG':'_', 
+    'TGC':'C', 'TGT':'C', 'TGA':'_', 'TGG':'W'} 
        
 def translate(dna):    
-    if len(dna) > 2 and len(dna) % 3 != 0:
+    if len(dna) > 2 and len(dna) % 3 is not 0:
         dna = dna[0: (len(dna) // 3) * 3] #Discard extra letters from the DNA sequence
     elif len(dna) < 3:
         return
@@ -29,10 +49,9 @@ def mutate(filename = 'dna.txt'):
         
 def txtTranslate():
     with open('normalDNA.txt', 'r') as f:
-        print(translate(''.join(f.read().split())))
+        print('>>> normalDNA.txt')
+        print(translate(''.join(f.read().split())) + "\n\n")
         
     with open('mutatedDNA.txt', 'r') as f:
-        print(translate(''.join(f.read().split())))
- 
-mutate()
-txtTranslate() 
+        print('>>> mutatedDNA.txt')
+        print(translate(''.join(f.read().split())) + "\n\n")
