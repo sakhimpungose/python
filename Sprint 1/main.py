@@ -7,7 +7,7 @@ AMINO_ACIDS = {'ATT': 'I', 'ATC': 'I', 'ATA': 'I',
 def translate(dna):    
     if len(dna) > 2 and len(dna) % 3 != 0:
         dna = dna[0: (len(dna) // 3) * 3] #Discard extra letters from the DNA sequence
-    elif len(dna) < 2:
+    elif len(dna) < 3:
         return
     
     return ''.join([AMINO_ACIDS[codon] if codon in AMINO_ACIDS.keys() else 'X' for codon in [dna[i:i+3] for i in range(0, len(dna), 3)]])
