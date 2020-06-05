@@ -1,11 +1,3 @@
-'''
-AMINO_ACIDS = {'ATT': 'I', 'ATC': 'I', 'ATA': 'I',
-'CTT': 'L', 'CTC': 'L', 'CTA': 'L', 'CTG': 'L', 'TTA': 'L', 'TTG': 'L',
-'GTT': 'V', 'GTC': 'V', 'GTA': 'V', 'GTG': 'V',
-'TTT': 'F', 'TTC': 'F',
-'ATG': 'M'}
-'''
-
 AMINO_ACIDS = { 
     'ATA':'I', 'ATC':'I', 'ATT':'I', 'ATG':'M', 
     'ACA':'T', 'ACC':'T', 'ACG':'T', 'ACT':'T', 
