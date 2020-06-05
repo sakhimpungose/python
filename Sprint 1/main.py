@@ -55,3 +55,6 @@ def txtTranslate():
     with open('mutatedDNA.txt', 'r') as f:
         print('>>> mutatedDNA.txt')
         print(translate(''.join(f.read().split())) + "\n\n")
+  
+mutate()
+txttxtTranslate()
