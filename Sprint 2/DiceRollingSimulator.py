@@ -1,7 +1,6 @@
 import random
 import time
 
-from dice import Dice
 """
 @author: Sakhile Mpungose
 
@@ -11,6 +10,19 @@ This is a simple dice rolling simulater. It prompts the user to roll a single di
 You can roll the dice as many times as you wish.
 When you are done, it will tell you how many times you rolled the dice.
 """
+
+class Dice():
+    
+    def __init__(self):
+        self.roll() # Initialising the dice with an appropriate random value
+        
+    def roll(self):
+        # Generate a random integer between 1 and 6 (both included)
+        self.__value = random.randint(1, 6)
+    
+    # String representation of the dice
+    def __str__(self):
+        return str(self.__value)
     
 class DiceRollingSimulator():
     # Defining messages that will be displayed to the user beforehand
