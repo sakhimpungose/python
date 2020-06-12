@@ -102,7 +102,7 @@ class DiceRollingSimulator():
             User input
     """
     def getUserInput(self, message):
-        return input(f"{message} \n>>> ")
+        return input(f"{message} \n>>> ").lower()
     
     """Creates a burger like message
      
