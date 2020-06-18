@@ -26,4 +26,4 @@ def generateNewPassword(n = 12):
     return ''.join(random.sample(characters, k = n))
 
 if __name__ == "__main__":
-    print(generateNewPassword())
+    print(f"New Password: \n{generateNewPassword()}")
